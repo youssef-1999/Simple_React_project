@@ -4,7 +4,7 @@ import Icon from '../Icon/Icon'
 
 function About() {
   return (
-    <div class="abouts p-4 text-white" id="about">
+    <div class="abouts p-2 text-white vh-100 d-flex justify-content-center align-items-center ">
       <div className="container ">
         <h3 className='text-center'>ABOUT COMPONENT</h3>
         <Icon/>

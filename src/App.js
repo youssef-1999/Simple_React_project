@@ -1,23 +1,28 @@
-import Home from './Home/Home';
-import Navbar from './Navbar/Navbar';
-import Start from './Start/Start';
-import Footer from './Footer/Footer'
 import About from './About/About';
 import Portflio from './Portflio/imgs/Portflio';
 import Contact from './Contact/Contact';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import PageNotFound from './PageNotFound/PageNotFound';
+import Layout from './Layout/Layout';
+import Start from './Start/Start';
+import './App.css'
 
 function App() {
+  let router = createBrowserRouter([
+    {
+      path: '',
+      element: <Layout />,
+      children: [
+        { index:true, element: <Start /> },
+        { path: 'about', element: <About /> },
+        { path: 'portflio', element: <Portflio /> },
+        { path: 'contact', element: <Contact /> },
+        { path: '*', element: <PageNotFound /> },
+      ],
+    },
+  ]);
   return (
-    <>
-    <Navbar/>
-    <Start/>
-    <Home/>
-    <About/>
-    <Portflio/>
-    <Contact/>
-    <Footer/>
-
-    </>
+    <RouterProvider router={router}></RouterProvider>
   );
 }
 

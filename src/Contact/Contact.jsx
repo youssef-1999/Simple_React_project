@@ -4,8 +4,8 @@ import Icon from '../Icon/Icon'
 
 function Contact() {
   return (
-    <div className='p-5' id="contact">
-      <div className="container text-center ">
+    <div className='p-5'>
+      <div className="container text-center p-5 ">
     <h1>CONATCT SECTION
 </h1>
 <Icon/>
